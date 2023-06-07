@@ -20,7 +20,7 @@
         <div class="container">
             <a href="ajoute.php" class="Btn_add"><img src="images/plus.png">Ajouter</a>
             <form action="rechercher.php" method="POST">
-                <input class="rech" type="text" name="search" placeholder="Rechercher ici">
+                <input class="rech" type="text" name="search">
                 <button type="submit">Rechercher</button>
             </form>
 
