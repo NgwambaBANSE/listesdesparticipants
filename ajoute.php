@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formStyle.css">
 </head>
 <body>
 
@@ -70,7 +71,7 @@
             <input type="text" name="ville">
             <label>Formation de base</label>
             <input type="text" name="formation">
-            <input type="submit" value="Ajouter" name="button">
+            <input class="rech" type="submit" value="Ajouter" name="button">
         </form>
     </div>
     </section>

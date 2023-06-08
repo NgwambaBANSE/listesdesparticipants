@@ -30,16 +30,18 @@
         // Vérifier que tous les champs ont été remplis
         if (isset($nom) && isset($prenom) && isset($date_de_naissance) && isset($ville) && isset($formation)) {
             // Requête de modification
-            $sql = "UPDATE employe (nom, prenom, date_de_naissance, ville, formation) VALUES (nom, :prenom, :date_de_naissance, :ville, :formation)";
+            $sql = "UPDATE employe SET nom = :nom, prenom = :prenom, date_de_naissance = :date_de_naissance, ville = :ville, formation = :formation WHERE id = :id";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nom', $nom);
             $stmt->bindParam(':prenom', $prenom);
             $stmt->bindParam(':date_de_naissance', $date_de_naissance);
-            $stmt->bindParam(':ville_origine', $ville);
-            $stmt->bindParam(':formation_de_base', $formation);
+            $stmt->bindParam(':ville', $ville);
+            $stmt->bindParam(':formation', $formation);
             $stmt->bindParam(':id', $id);
-            if ($conn->query($sql) === TRUE) {
+            if ($stmt->execute()) {
                 // Si la requête a été effectuée avec succès, on fait une redirection
+                header("Location: index.php");
+                exit(); // Terminer le script pour éviter toute exécution supplémentaire
             } else {
                 // Si non
                 $message = "Apprenant non modifié";
@@ -52,9 +54,7 @@
     ?>
     <div class="form">
         <a href="index.php" class="back_btn"><img src="images/back.png">Retour</a>
-        <h2>Modifier un apprenant :
-            <?= $row['nom'] ?>
-        </h2>
+        <h2>Modifier un apprenant : <?= $row['nom'] ?></h2>
         <p class="erreur_message">
             <?php
             if (isset($message)) {
@@ -62,7 +62,7 @@
             }
             ?>
         </p>
-        <form action="ajoute.php" method="POST">
+        <form action="" method="POST">
             <label>Nom</label>
             <input type="text" name="nom" value="<?= $row['nom'] ?>">
             <label>Prénom</label>
@@ -77,4 +77,5 @@
         </form>
     </div>
 </body>
+
 </html>

@@ -20,10 +20,12 @@ body {
   background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100");
 }
 .arrierPlan h4 {
-  color: white;
-  background-color: #2bc48a;
-  text-align: center;
-  font-weight: bold;
+text-align: center;
+color: white;
+/* backdrop-filter: blur(10px);
+background-color: #2bc48a;
+border-radius: 50px;
+box-shadow: 35px 35px 68px 0px rgba(2, 208, 18, 0.5), inset -12px -12px 16px 0px rgba(2, 208, 18, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255); */
 }
 .arrierPlan div form input {
   background-color: white;
@@ -48,7 +50,6 @@ body {
 .Btn_add {
   width: fit-content;
   margin-bottom: 20px;
-  background-color: #2bc48a;
   padding: 5px 20px;
   color: #fff;
   display: flex;
@@ -60,6 +61,16 @@ body {
 .Btn_add img {
   margin-right: 5px;
   height: 20px;
+}
+.arrierPlan h4,
+.Btn_add,
+form button,
+form rech{
+backdrop-filter: blur(10px);
+background-color: #2bc48a;
+border-radius: 50px;
+box-shadow: 35px 35px 68px 0px rgba(2, 208, 18, 0.5), inset -12px -12px 16px 0px rgba(2, 208, 18, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+
 }
 /*tableau*/
 table {
