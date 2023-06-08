@@ -146,3 +146,14 @@ input[type="submit"] {
   color: #fff;
   text-transform: uppercase;
 }
+.oui input{
+  background-color: red;
+  border: 1px solid red;
+
+}
+.oui a{
+  background-color: #2bc48a;
+  border: 1px solid #2bc48a;
+
+  color: white;
+}
