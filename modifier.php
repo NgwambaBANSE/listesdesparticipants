@@ -40,7 +40,7 @@
             $stmt->bindParam(':id', $id);
             if ($stmt->execute()) {
                 // Si la requête a été effectuée avec succès, on fait une redirection
-                header("Location: index.php");
+                header("Location: verifier.php");
                 exit(); // Terminer le script pour éviter toute exécution supplémentaire
             } else {
                 // Si non
@@ -53,7 +53,7 @@
     }
     ?>
     <div class="form">
-        <a href="index.php" class="back_btn"><img src="images/back.png">Retour</a>
+        <a href="verifier.php" class="back_btn"><img src="images/back.png">Retour</a>
         <h2>Modifier un apprenant : <?= $row['nom'] ?></h2>
         <p class="erreur_message">
             <?php

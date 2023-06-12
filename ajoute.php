@@ -40,7 +40,7 @@
                 $stmt->execute();
 
                 //redirection vers la page index.php
-                header("Location: index.php");
+                header("Location: verifier.php");
                 exit();
             } catch(PDOException $e) {
                 $message = "Erreur : " . $e->getMessage();
@@ -51,7 +51,7 @@
     }
     ?>
     <div class="form">
-        <a href="index.php" class="back_btn"><img src="images/back.png">Retour</a>
+        <a href="verifier.php" class="back_btn"><img src="images/back.png">Retour</a>
         <h2>Ajouter un apprenant</h2>
         <p class="erreur_message">
             <?php

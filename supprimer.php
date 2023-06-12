@@ -14,7 +14,7 @@ if (isset($_POST['confirm'])) {
     $stmt->execute();
 
     // Redirection vers la page index.php
-    header("Location: index.php");
+    header("Location: verifier.php");
     exit();
 }
 
@@ -49,7 +49,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
         <p>Formation de base: <?= $row['formation'] ?></p>
         <form class="oui" action="" method="POST">
             <input type="submit" value="Oui" name="confirm">
-            <a href="index.php">Non</a>
+            <a href="verifier.php">Non</a>
         </form>
     </div>
 </body>

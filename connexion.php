@@ -5,14 +5,9 @@ try {
     $username = "root";
     $password = "";
     $dbname = "apprenant";
-
-    // Création de l'objet PDO
+    
     $conn = new PDO("mysql:host=$servername;dbname=apprenant", $username, $password);
-
-    // Configuration des options PDO
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Vérification de la connexion
     if ($conn) {
         echo "";
     } else {
