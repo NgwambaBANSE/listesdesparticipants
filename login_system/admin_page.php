@@ -26,9 +26,9 @@ if(!isset($_SESSION['admin_name'])){
 <div class="container">
 
    <div class="content">
-      <h3>hi, <span>admin</span></h3>
-      <h1>welcome <span><?php echo $_SESSION['admin_name'] ?></span></h1>
-      <p>this is an admin page</p>
+      <h3>Salut, <span>administrateur</span></h3>
+      <h1>Bienvenu <span><?php echo $_SESSION['admin_name'] ?></span></h1>
+      <p>Vous etes sur la page des administrateur</p>
       <a href="../index.php" class="btn">Se connecter</a>
       <a href="../ajoute.php" class="btn">Ajouter un apprenant</a>
       <a href="register_form.php" class="btn">Ajouter un administrateur</a>
