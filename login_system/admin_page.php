@@ -19,6 +19,8 @@ if(!isset($_SESSION['admin_name'])){
    <title>admin page</title>
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="../formStyle.css">
+
 
 </head>
 <body>
@@ -30,11 +32,10 @@ if(!isset($_SESSION['admin_name'])){
       <h1>Bienvenu <span><?php echo $_SESSION['admin_name'] ?></span></h1>
       <p>Vous etes sur la page des administrateur</p>
       <a href="../index.php" class="btn">Se connecter</a>
-      <a href="../ajoute.php" class="btn">Ajouter un apprenant</a>
+      <a href="../verifier.php" class="btn">Afficher les apprenants</a>
       <a href="register_form.php" class="btn">Ajouter un administrateur</a>
    </div>
 
 </div>
-
 </body>
 </html>
