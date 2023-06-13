@@ -15,10 +15,13 @@
 <body>
 
     <section class="background arrierPlan">
-    <h4>LISTE DES APPRENANTS</h4>
+        <h4>LISTE DES APPRENANTS</h4>
 
         <div class="container">
             <a href="ajoute.php" class="Btn_add"><img src="images/plus.png">Ajouter</a>
+            <!-- <a href="login_system/admin_page.php" class="Btn_add">Page administrateur</a> -->
+            <a href="login_system/logout.php" class="Btn_add">Se deconnecter</a>
+
             <form action="rechercher.php" method="POST">
                 <input class="rech" type="text" name="search">
                 <button type="submit">Rechercher</button>
@@ -69,6 +72,8 @@
                 }
                 ?>
             </table>
+            <a href="login_system/logout.php" class="Btn_add">Se deconnecter</a>
+
         </div>
     </section>
 
