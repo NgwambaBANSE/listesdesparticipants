@@ -62,7 +62,7 @@
             }
             ?>
         </p>
-        <form action="" method="POST">
+        <form class="ajouterApp" action="" method="POST">
             <label>Nom</label>
             <input type="text" name="nom" value="<?= $row['nom'] ?>">
             <label>Prénom</label>

@@ -20,18 +20,18 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body {
+/* body {
   background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100");
-}
+} */
 
 /*Form CSS*/
 .form {
     background-color: #f7f6f8;
     padding: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px #2bc48a(0, 0, 0, 0.2);
     border-radius: 6px;
   }
-  .back_btn {
+  .btn {
     color: #2bc48a;
     text-decoration: 0;
     display: flex;

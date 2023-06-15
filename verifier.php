@@ -19,7 +19,7 @@
 
         <div class="container">
             <a href="ajoute.php" class="Btn_add"><img src="images/plus.png">Ajouter</a>
-            <!-- <a href="login_system/admin_page.php" class="Btn_add">Page administrateur</a> -->
+            <a href="login_system/admin_page.php" class="Btn_add">Page administrateur</a>
             <a href="login_system/logout.php" class="Btn_add">Se deconnecter</a>
 
             <form action="rechercher.php" method="POST">
@@ -28,15 +28,17 @@
             </form>
 
             <table>
+                <thead>
                 <tr class="liste" id="items">
                     <th>Nom</th>
                     <th>Prénom</th>
-                    <th>Date de naissance</th>
+                    <th class="dispar">Date de naissance</th>
                     <th>Ville d'origine</th>
-                    <th>Formation de base</th>
+                    <th class="dispar">Formation de base</th> 
                     <th>Modifier</th>
                     <th>Supprimer</th>
                 </tr>
+                </thead>
                 <?php
                 // Inclure le fichier de connexion PDO
                 include_once "connexion.php";
@@ -48,6 +50,7 @@
                 } else {
                     while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
                         ?>
+                        <tbody>
                         <tr>
                             <td>
                                 <?= $row['nom'] ?>
@@ -67,6 +70,7 @@
                             <td><a href="modifier.php?id=<?= $row['id'] ?>"><img src="images/pen.png"></a></td>
                             <td><a href="supprimer.php?id=<?= $row['id'] ?>"><img src="images/trash.png"></a></td>
                         </tr>
+                        </tbody>
                         <?php
                     }
                 }
@@ -76,6 +80,9 @@
 
         </div>
     </section>
+
+ 
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

@@ -10,14 +10,21 @@
 </head>
 
 <body>
-    <table>
-        <tr id="items">
+<div class="form">
+<a href="verifier.php" class="back_btn"><img src="images/back.png">Retour</a>
+
+    <table class="responsive">
+
+        <thead>
+        <tr class="liste" id="items">
+
             <th>Nom</th>
             <th>Prénom</th>
             <th>Date de naissance</th>
             <th>Ville d'origine</th>
             <th>Formation de base</th>
         </tr>
+        </thead>
         <?php
         require_once 'connexion.php';
 
@@ -56,7 +63,7 @@
             <?php
         }
         ?>
-
+</div>
 </body>
 
 </html>

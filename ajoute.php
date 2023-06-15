@@ -60,7 +60,7 @@
             }
             ?>
         </p>
-        <form action="ajoute.php" method="POST">
+        <form class="ajouterApp" action="ajoute.php" method="POST">
             <label>Nom</label>
             <input type="text" name="nom">
             <label>Prénom</label>
